@@ -20,10 +20,8 @@
 	font-family: 'Nunito', sans-serif;
 	font-weight: 400;
 }
-body {
-	img {
-		width: 100%;
-	}
+img {
+	width: 100%;
 }
 html {
 	font-size: 62.5%;
@@ -153,5 +151,97 @@ html {
 				box-shadow: -0.2rem -0.2rem -0.2rem #000;
 			}
 		}
+	}
+}
+// Section 3
+.section-3 {
+	background-color: #333;
+	padding: 5em 0;
+	.gallery {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		place-items: center;
+		margin-top: 10em;
+		grid-row-gap: 10rem;
+		&-link {
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 1.5vw;
+				left: 78%;
+				width: 0.2rem;
+				height: 0;
+				background-color: #fff;
+				transition: all 0.5s;
+				z-index: 3;
+			}
+			&:hover::before {
+				height: 78%;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				top: 30%;
+				left: 2rem;
+				width: 0;
+				height: 0.2rem;
+				background-color: #fff;
+				transition: all 0.5s;
+			}
+			&:hover::after {
+				width: 80%;
+			}
+			.food-name {
+				position: absolute;
+				top: 3rem;
+				left: 3rem;
+				font-size: 2rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				color: white;
+				width: 0;
+				overflow: hidden;
+				transition: all 0.3s;
+			}
+			&:hover .food-name {
+				width: 80%;
+				transition: all 1.5s 0.5s ease-out;
+			}
+			.food-description {
+				position: absolute;
+				bottom: 3vw;
+				left: 2rem;
+				width: 70%;
+				font-size: 1.5rem;
+				font-weight: 300;
+				letter-spacing: 0.1rem;
+				text-transform: uppercase;
+				color: white;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.3s;
+			}
+			&:hover .food-description {
+				opacity: 1;
+				visibility: visible;
+				transition: opacity 1s 1s;
+			}
+			&:hover .food-image {
+				box-shadow: 1rem 1rem 0.1rem #e92929, 2rem 2rem 0.1rem #a2e946,
+					3rem 3rem 0.1rem #297ce9, 4rem 4rem 0.1rem #e92999;
+				filter: blur(0.5rem);
+				opacity: 0.6;
+				transform: scale3d(1.1);
+			}
+		}
+	}
+	img {
+		width: 21vw;
+		height: 21vh;
+		object-fit: cover;
+		box-shadow: 0.3rem 0.3rem 0.1rem #e92929, 0.5rem 0.5rem 0.1rem #a2e946,
+			0.7rem 0.7rem 0.1rem #297ce9, 0.9rem 0.9rem 0.1rem #e92999;
+		transition: all 0.5s;
 	}
 }
