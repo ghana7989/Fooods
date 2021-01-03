@@ -1,0 +1,20 @@
+{
+  "name": "foods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"sass --watch style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghana7989/Fooods.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghana7989/Fooods/issues"
+  },
+  "homepage": "https://github.com/ghana7989/Fooods#readme"
+}
