@@ -106,6 +106,8 @@ html {
 	box-shadow: 0.1rem 0.1rem 0.1rem black, -0.1rem -0.1rem 0.1rem black;
 	cursor: pointer;
 	transition: top 0.3s 0.2s;
+	z-index: 1555555;
+	user-select: none;
 	&::before {
 		content: '';
 		width: 0.3rem;
@@ -242,7 +244,6 @@ html {
 .section-3 {
 	background-color: #333;
 	padding: 5em 0;
-	height: 100vh;
 	.gallery {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -391,6 +392,119 @@ html {
 			border: none;
 			cursor: pointer;
 			font-size: 1.8rem;
+		}
+	}
+}
+
+// Responsive
+
+@media (max-width: 1400px) {
+	html {
+		font-size: 50%;
+	}
+	.section-2 {
+		height: auto;
+		padding: 10rem 0 12rem 0;
+	}
+	.cards-container {
+		margin-top: 10rem;
+	}
+	.gallery-link {
+		width: 40em;
+		height: 25rem;
+		margin: 5rem;
+		row-gap: 8rem;
+		.food-img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+@media (max-width: 1000px) {
+	.section-heading {
+		font-size: 9rem;
+		margin: 0;
+	}
+	.section-1-icons {
+		font-size: 23rem;
+	}
+	.cards-container {
+		flex-wrap: wrap;
+		.card {
+			margin: 5rem;
+		}
+	}
+	.section-3 {
+		img {
+			width: 100%;
+		}
+
+		.gallery {
+			grid-template-columns: 1fr 1fr;
+			row-gap: 5rem;
+			justify-content: center;
+			align-items: center;
+			place-items: center;
+		}
+	}
+	.section-4 {
+		height: 30rem;
+	}
+}
+@media (max-width: 800px) {
+	.navbar-link {
+		margin: 2rem;
+		i {
+			font-size: 4rem;
+		}
+		span {
+			font-size: 2rem;
+		}
+	}
+}
+@media (max-width: 650px) {
+	.section-heading {
+		font-size: 7rem;
+		margin: 0 10rem;
+		.menu {
+			left: 2rem;
+		}
+	}
+	.navbar {
+		height: 10rem;
+	}
+	.navbar-link {
+		margin: 2rem;
+		i {
+			font-size: 2rem;
+		}
+		span {
+			font-size: 1rem;
+		}
+	}
+	.section-1-icons {
+		font-size: 10rem;
+	}
+	.section-3 {
+		img {
+			width: 100%;
+		}
+
+		.gallery {
+			grid-template-columns: 1fr;
+			row-gap: 3rem;
+			justify-content: center;
+			align-items: center;
+			place-items: center;
+		}
+	}
+	.section-4 {
+		height: 40rem;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		&-text {
+			margin-bottom: 8rem;
 		}
 	}
 }
