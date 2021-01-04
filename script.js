@@ -1,3 +1,11 @@
+
+document.querySelector(".menu").addEventListener("click", function () {
+  document.querySelectorAll(".nav-active").forEach((item) => {
+    item.classList.toggle("change")
+  })
+})
+
+
 const icons = document.querySelectorAll(".section-1-icons .fas");
 console.log('icons: ', icons);
 
